@@ -1,17 +1,36 @@
 <template>
     <div>
-        <header>
-            <img id="logo" src="/images/logo.svg" alt="The Selfie Project Logo">
+       <header>
+            <img src="/images/logo_v1.svg" alt="Get Smokin' logo" id="logo">
+            <span id="hmbgrMenu" style="font-size:30px;cursor:pointer;color: #BF5630;" onclick="showNav()">&#9776; </span>
+            <div id="navCon">
+                <nav id="mainNav">
+                    <h3 class="hidden">Main Navigation</h3>
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#">RECIPES</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">SIGN UP</a></li>
+                    </ul>
+                    
+                </nav>
+            </div>
+            <div id="navOverCon" class="overlay">
+                <h3 class="hidden">Main Navigation</h3>
+                <a href="javascript:void(0)" class="closebtn" onclick="hideNav()">&times;</a>
+                <div class="overlay-con">
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="#">RECIPES</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">SIGN UP</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
-        <section id="landing">
-            <h1>Welcome to the Selfie Project</h1>
-            <p>Our mission is to promote body inclusivity and self love to the world, by letting you share your beautiful faces without any worry of opinions.</p>
-        </section>
 
-        <section>
-            <image-form />
-        </section>
-
+        <router-view></router-view>
+        
         <footer>
             <p>DESIGNED AND DEVELOPED BY GRAHAM VICKERS&copy;</p>
         </footer>
@@ -19,44 +38,16 @@
 </template>
 
 <script>
-    import ImageForm from './partials/image-form.vue';
 
     export default {
         name: 'app',
-        props: {
-            image: {
-                type: Object,
-                required: true
-            }
-        },
-        mounted() {
-            //console.log(this.upload);
-            this.$store.commit('image', this.image);
-        },
-        components: {
-            ImageForm
-        }
+        
+        
     };
+
+    
 </script>
 
 <style lang="scss">
-    main{
-        padding: 30px 40px;
-        height: 100vh;
-        background-color: #f2f2f2;
-    }
-    .hidden{
-        display: none;
-    }
-    #logo{
-        max-width: 280px; 
-        margin-bottom: 60px;
-    }
-    #landing{
-        text-align: left;
-        margin-bottom: 60px;
-        p{
-            font-size: 14px;
-        }
-    }
+    
 </style>
