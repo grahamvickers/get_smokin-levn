@@ -9,9 +9,9 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     mutations: {
-        image (state, ImageData) {
-            state.image = ImageData;
-        }
+        // image (state, ImageData) {
+        //     state.image = ImageData;
+        // }
     }
 });
 

@@ -14,8 +14,8 @@ use Illuminate\Http\Request;
 */
 
 
-Route::middleware('auth:api')->get('/image', function (Request $request) {
-    return $request->image();
-});
+// Route::middleware('auth:api')->get('/image', function (Request $request) {
+//     return $request->image();
+// });
 
-route::patch('images/{image}', 'Api\ImageController@create')->name('images.create');
+// route::patch('images/{image}', 'Api\ImageController@create')->name('images.create');

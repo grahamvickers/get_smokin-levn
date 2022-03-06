@@ -8,7 +8,7 @@
                     <h3 class="hidden">Main Navigation</h3>
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="#">RECIPES</a></li>
+                        <li><router-link to="/recipes">RECIPES</router-link></li>
                         <li><a href="#">BLOG</a></li>
                         <li><a href="#">SIGN UP</a></li>
                     </ul>
@@ -21,7 +21,7 @@
                 <div class="overlay-con">
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="#">RECIPES</a></li>
+                        <li><router-link to="/recipes">RECIPES</router-link></li>
                         <li><a href="#">BLOG</a></li>
                         <li><a href="#">SIGN UP</a></li>
                     </ul>
@@ -30,7 +30,7 @@
         </header>
 
         <router-view></router-view>
-        
+
         <footer>
             <p>DESIGNED AND DEVELOPED BY GRAHAM VICKERS&copy;</p>
         </footer>
