@@ -178,6 +178,52 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'app'
 });
@@ -816,6 +862,68 @@ var staticRenderFns = [
             }
           })
         ])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "recipes" } }, [
+        _c("h2", [_vm._v("EXPLORE OUR RECIPES")]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "recipeBoxes" } }, [
+          _c("div", { staticClass: "recipeCon" }, [
+            _c("img", { attrs: { src: "images/chicken.png", alt: "Chicken" } }),
+            _vm._v(" "),
+            _c("a", { staticClass: "button", attrs: { href: "#" } }, [
+              _vm._v("CHICKEN")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipeCon" }, [
+            _c("img", { attrs: { src: "images/steak.png", alt: "BEEF" } }),
+            _vm._v(" "),
+            _c("a", { staticClass: "button", attrs: { href: "#" } }, [
+              _vm._v("BEEF")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipeCon" }, [
+            _c("img", { attrs: { src: "images/sausage.png", alt: "Pork" } }),
+            _vm._v(" "),
+            _c("a", { staticClass: "button", attrs: { href: "#" } }, [
+              _vm._v("PORK")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipeCon" }, [
+            _c("img", { attrs: { src: "images/fish.png", alt: "fish" } }),
+            _vm._v(" "),
+            _c("a", { staticClass: "button", attrs: { href: "#" } }, [
+              _vm._v("FISH")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "blog" } }, [
+        _c("h2", [_vm._v("THE BLOG")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n            We post weekly blogs about tips and tricks\n             to mastering live fire cooking. Explore some our recent blogs…  \n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "button" }, [_vm._v("▶ RECENT POST")])
+      ]),
+      _vm._v(" "),
+      _c("section", { attrs: { id: "newsletter" } }, [
+        _c("h2", [_vm._v("WEEKLY NEWSLETTER")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "\n            We send out weekly newsletters\n             via email about what is new in the smoking and barbecue world. Join our mailing list TODAY!   \n        "
+          )
+        ]),
+        _vm._v(" "),
+        _c("button", [_vm._v("▶ SIGN UP")])
       ])
     ])
   }
