@@ -135,7 +135,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'app'
+  name: 'app',
+  data: function data() {
+    return {
+      theRecipes: []
+    };
+  },
+  created: function created() {
+    var vm = this;
+    fetch("/api/recipes").then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data.results);
+      vm.theRecipes = data.result;
+    });
+  }
 });
 
 /***/ }),
@@ -245,7 +259,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['recipes']
+});
 
 /***/ }),
 
@@ -815,7 +831,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("router-view"),
+      _c("router-view", { attrs: { recipes: _vm.theRecipes } }),
       _vm._v(" "),
       _vm._m(6)
     ],

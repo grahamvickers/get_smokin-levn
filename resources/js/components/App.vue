@@ -29,7 +29,7 @@
             </div>
         </header>
 
-        <router-view></router-view>
+        <router-view v-bind:recipes="theRecipes"></router-view>
 
         <footer>
             <p>DESIGNED AND DEVELOPED BY GRAHAM VICKERS&copy;</p>
@@ -41,7 +41,21 @@
 
     export default {
         name: 'app',
-        
+        data() {
+            return {
+                theRecipes: []
+            }
+        },
+        created: function() {
+            let vm = this;
+            fetch(`/api/recipes`) 
+            .then(function(response){
+            return response.json();
+            }).then(function(data){
+                console.log(data.results)
+                vm.theRecipes = data.result;
+            })
+        }
         
     };
 
