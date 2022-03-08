@@ -143,11 +143,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     var vm = this;
-    fetch("/api/recipes").then(function (response) {
+    fetch("http://localhost:8082/api/get-recipes").then(function (response) {
       return response.json();
     }).then(function (data) {
-      console.log(data.results);
-      vm.theRecipes = data.result;
+      console.log(data);
+      vm.theRecipes = data;
     });
   }
 });
