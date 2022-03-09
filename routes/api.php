@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::group(['namespace' => 'Api'], function(){
     Route::get('get-recipes', 'RecipeController@index');
 });
+
+Route::group(['namespace' => 'Api'], function(){
+    Route::get('get-blogs', 'BlogController@index');
+});

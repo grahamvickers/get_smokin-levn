@@ -9,7 +9,7 @@
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><router-link to="/recipes">RECIPES</router-link></li>
-                        <li><a href="#">BLOG</a></li>
+                        <li><router-link to="/blog">BLOG</router-link></li>
                         <li><a href="#">SIGN UP</a></li>
                     </ul>
                     
@@ -22,14 +22,14 @@
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><router-link to="/recipes">RECIPES</router-link></li>
-                        <li><a href="#">BLOG</a></li>
+                        <li><router-link to="/blog">BLOG</router-link></li>
                         <li><a href="#">SIGN UP</a></li>
                     </ul>
                 </div>
             </div>
         </header>
 
-        <router-view v-bind:recipes="theRecipes"></router-view>
+        <router-view v-bind:recipes="theRecipes" v-bind:posts="theBlog"></router-view>
 
         <footer>
             <p>DESIGNED AND DEVELOPED BY GRAHAM VICKERS&copy;</p>
@@ -43,7 +43,7 @@
         name: 'app',
         data() {
             return {
-                theRecipes: []
+                theRecipes: [],
             }
         },
         created: function() {

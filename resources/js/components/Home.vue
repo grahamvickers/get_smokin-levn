@@ -53,29 +53,55 @@
             </div>
         </section>
 
-        <section id="blog">
-            <h2>THE BLOG</h2>
-            <p>
-                We post weekly blogs about tips and tricks
-                 to mastering live fire cooking. Explore some our recent blogs…  
-            </p>
-            <button class="button">▶ RECENT POST</button>
-        </section>
-
-        <section id="newsletter">
-            <h2>WEEKLY NEWSLETTER</h2>
-            <p>
-                We send out weekly newsletters
-                 via email about what is new in the smoking and barbecue world. Join our mailing list TODAY!   
-            </p>
-            <button >▶ SIGN UP</button>
-        </section>
+        <blog-banner />
     </div>
 </template>
 
 <script>
+    import BlogBanner from './partials/blog-banner.vue';
+
     export default {
-        name: 'app',
-        
+        components: {
+            BlogBanner
+        },
+        mounted: function () {
+            (function landingGallery() {
+                let count = 0;
+                let img = ["brisket","chicken_platter","sausage"];
+
+                const back = document.querySelector("#back");
+                const next = document.querySelector("#next");
+                let foodImg = document.querySelector("#imgGallery");
+
+                    function nextImg()	{
+                    count++;
+                        if (count == img.length) {
+                            count = 0;
+                        }		
+                        TweenMax.to(foodImg, 1, {autoAlpha:0, onComplete:done}); 
+                    }
+                
+                    function backImg() {
+                        count--;
+                        if (count < 0) {
+                            count = img.length - 1;
+                        }	
+                        TweenMax.to(foodImg, 1, {autoAlpha:0, onComplete:done});
+                    }
+                
+                    function done() {	
+                            let gallSrcset = 
+                            `/images/${img[count]}.jpg`;
+                            let gallsSrc = `/images/${img[count]}.jpg`;
+                            foodImg.src = gallsSrc;
+                            foodImg.srcset = gallSrcset;
+                            TweenMax.to(foodImg, 1, {autoAlpha:1}); 		
+                    }
+
+                back.addEventListener("click", nextImg, false); 
+                next.addEventListener("click", backImg, false);
+
+            })()
+        }
     };
 </script>
